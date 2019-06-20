@@ -9,6 +9,7 @@
     <Grid RenderTransformOrigin="0.499,0.512">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="70" Margin="245,125,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="295" Margin="55,40,0,0" VerticalAlignment="Top" Width="135"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="640,55,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>
