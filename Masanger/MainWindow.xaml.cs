@@ -41,7 +41,21 @@ namespace Masanger
                     var dateSend = reader["DateSend"].ToString();
                     var text = reader["Text"].ToString();
 
-                    textBox.Text = $"{id} - {status} - {sender} - {text} - {dateSend}\n";
+                    textBox.Text = /*$"{id} - {status} - {sender} - */$"{ text} - {dateSend}\n";
+                }
+            }
+            using (SqlConnection sqlConnection = new SqlConnection(strCon))
+            {
+                sqlConnection.Open();               
+                string sqlQuery2 = "Select Id, Name, Email, Phone From tblUsers";
+                SqlCommand com2 = new SqlCommand(sqlQuery2, sqlConnection);
+                SqlDataReader reader2 = com2.ExecuteReader();
+                while (reader2.Read())
+                {
+                    var id = reader2["Name"].ToString();
+                    ListBoxItem itm = new ListBoxItem();
+                    itm.Content = id;
+                    listBox.Items.Add(itm);
                 }
             }
         }
