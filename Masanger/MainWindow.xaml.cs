@@ -41,7 +41,7 @@ namespace Masanger
                     var dateSend = reader["DateSend"].ToString();
                     var text = reader["Text"].ToString();
 
-                    textBox.Text = /*$"{id} - {status} - {sender} - */$"{ text} - {dateSend}\n";
+                    textBoxMasage.Text = /*$"{id} - {status} - {sender} - */$"{ text} - {dateSend}\n";
                 }
             }
             using (SqlConnection sqlConnection = new SqlConnection(strCon))
@@ -57,6 +57,19 @@ namespace Masanger
                     itm.Content = id;
                     listBox.Items.Add(itm);
                 }
+            }
+        }
+
+        private void BtnSend_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxMasage.Text = textBoxSend.Text;
+        }
+
+        private void Grid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                textBoxMasage.Text = textBoxSend.Text;
             }
         }
     }

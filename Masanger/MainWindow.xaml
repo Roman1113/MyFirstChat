@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Masanger"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid RenderTransformOrigin="0.499,0.512">
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="70" Margin="210,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+    <Grid RenderTransformOrigin="0.499,0.512" KeyDown="Grid_KeyDown">
+        <TextBox x:Name="textBoxMasage" HorizontalAlignment="Left" Height="70" Margin="210,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="320" Margin="45,40,0,0" VerticalAlignment="Top" Width="160" Background="#FFC0F0ED"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="640,55,0,0" VerticalAlignment="Top" Width="100" Source="Resources/1.jpg"/>
-        <Button x:Name="button" Content="Send" HorizontalAlignment="Left" Margin="210,153,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="35" Margin="210,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
-        <Label x:Name="label" Content="Right text:" HorizontalAlignment="Left" Margin="210,64,0,0" VerticalAlignment="Top" Foreground="#DD25C715" RenderTransformOrigin="0.391,0.423"/>
+        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="210,153,0,0" VerticalAlignment="Top" Width="75" Click="BtnSend_Click"/>
+        <TextBox x:Name="textBoxSend" HorizontalAlignment="Left" Height="35" Margin="210,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+        <Label x:Name="label" Content="Write text:" HorizontalAlignment="Left" Margin="210,64,0,0" VerticalAlignment="Top" Foreground="#DD25C715" RenderTransformOrigin="0.391,0.423"/>
     </Grid>
 </Window>
