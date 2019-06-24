@@ -24,6 +24,8 @@ namespace Masanger
     {
         public MainWindow()
         {
+
+            
             InitializeComponent();
 
             string strCon = ConfigurationManager.ConnectionStrings["SomeeConnection"].ConnectionString;
@@ -60,9 +62,18 @@ namespace Masanger
             }
         }
 
+        private void Seed(SqlConnection con)
+        {
+            //string tblMessages;
+            string query = $"Insert into tblMessages (Text)" + $"values({textBoxSend.Text})";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+
         private void BtnSend_Click(object sender, RoutedEventArgs e)
         {
             textBoxMasage.Text = textBoxSend.Text;
+            
         }
 
         private void Grid_KeyDown(object sender, KeyEventArgs e)
